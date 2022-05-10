@@ -14,6 +14,7 @@ class App extends Component {
       <React.Fragment>
         <Navbar />
         <Routes>
+          <Route path="/home" element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/linux" element={<Linux />} />
           <Route path="/django" element={<Django />} />
