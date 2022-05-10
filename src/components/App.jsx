@@ -18,7 +18,11 @@ class App extends Component {
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/" element={<Home />} />
-            <Route path="/linux" element={<Linux />} />
+            <Route path="/linux" element={<Linux />}>
+              <Route path="homework" element={<h4>Homework</h4>} />
+              <Route path="terminal" element={<h4>Terminal</h4>} />
+              <Route path="*" element={<h4>Others</h4>} />
+            </Route>
             <Route path="/django" element={<Django />} />
             <Route path="/web" element={<Web />} />
             <Route path="/web/content" element={<WebContent />} />
