@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import Linux from "./Linux";
@@ -22,7 +22,8 @@ class App extends Component {
             <Route path="/django" element={<Django />} />
             <Route path="/web" element={<Web />} />
             <Route path="/web/content" element={<WebContent />} />
-            {/* <Route path="*" element={<NotFound />} /> */}
+            <Route path="/404" element={<NotFound />} />
+            <Route path="*" element={<Navigate replace to="/404" />} />
           </Routes>
         </div>
       </React.Fragment>
